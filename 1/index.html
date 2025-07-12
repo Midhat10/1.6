@@ -10,6 +10,9 @@
     <title>Авторизованный сервисный центр по ремонту техники Dell</title>
     <!-- Подключаю нормалайз сиэсэс -->
     <link rel="stylesheet" href="css/normalize.css">
+    <link
+      rel="stylesheet"
+      href="node_modules/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
@@ -144,19 +147,55 @@
               class="main__image">
           </div>
         </div>
-      </div>
 
-      <aside class="aside flex">
-       <div class="aside__transition">
-         <div class="aside__header flex">
-                    <button class="btn nav__btn nav__btn--cancellation">
+        <!-- Подключение свайпера -->
+
+        <div class="swiper">
+          <div class="swiper__gradient-block">
+          </div>
+          <h2 class="swiper__title">
+            Ремонт техники различных брендов
+          </h2>
+          <!-- Additional required wrapper -->
+          <ul class="swiper-wrapper">
+            <!-- Slides -->
+          </ul>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <button class="swiper__handler btn__reset">Показать все</button>
+        </div>
+
+        <div class="swiper swiper__different-technics">
+          <div class="swiper__gradient-block">
+          </div>
+          <h2 class="swiper__title">
+            Ремонт различных видов техники
+          </h2>
+          <!-- Additional required wrapper -->
+          <ul class="swiper-wrapper swiper-wrapper__different-technics">
+
+            <!-- Slides -->
+          </ul>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <button class="swiper__handler swiper__handler-2 btn__reset">Показать все</button>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Подключение меню -->
+    <aside class="aside flex">
+      <div class="aside__transition">
+        <div class="aside__header flex">
+          <button class="btn btn__reset aside__btn aside__btn--cancellation">
           </button>
           <div class="logoplace">
             <a href="#" class="logo__link">
               <img src="svg/cps.svg" alt="logo" class="logo">
             </a>
           </div>
-          <button class="btn nav__btn nav__btn--search">
+          <button class="btn btn__reset aside__btn aside__btn--search">
           </button>
         </div>
         <nav class="main__nav nav">
@@ -203,22 +242,22 @@
             </li>
           </ul>
         </nav>
-       </div>
-         <div class="aside__footer">
-           <ul class="aside__btns-list flex">
-            <li class="aside__item">
-              <button class="btn aside__btn aside__btn--phone">
-              </button>
-            </li>
-            <li class="aside__item">
-              <button class="btn aside__btn aside__btn--feedback">
-              </button>
-            </li>
-            <li class="aside__item">
-              <button class="btn aside__btn aside__btn--contacts">
-              </button>
-            </li>
-          </ul>
+      </div>
+      <div class="aside__footer">
+        <ul class="aside__btns-list flex">
+          <li class="aside__item">
+            <button class="btn btn__reset aside__btn aside__btn--phone">
+            </button>
+          </li>
+          <li class="aside__item">
+            <button class="btn btn__reset aside__btn aside__btn--feedback">
+            </button>
+          </li>
+          <li class="aside__item">
+            <button class="btn btn__reset aside__btn aside__btn--contacts">
+            </button>
+          </li>
+        </ul>
         <ul class="aside__contacts contacts flex">
           <li class="contacts__item">
             <a href="mailto:mail@cps.com" class="contacts__link--mail">
@@ -248,9 +287,27 @@
             </a>
           </li>
         </ul>
-         </div>
-      </aside>
-    </main>
+      </div>
+    </aside>
+
+    <template id="slide-template">
+      <div class="swiper-slide flex">
+        <div class="logoplace">
+        </div>
+        <button class="swiper__btn btn__reset">
+        </button>
+      </div>
+    </template>
+
+    <template id="slide-template2">
+      <div class="swiper-slide flex">
+        <button class="swiper__btn btn__reset">
+        </button>
+      </div>
+    </template>
+
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 
   </body>
 </html>
