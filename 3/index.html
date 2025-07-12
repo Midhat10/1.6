@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Левое меню сайта ремонта техники">
+    <meta name="keywords"
+      content="ремонт, ремонтируемые устройства, ноутбук, Dell">
+    <title>Авторизованный сервисный центр по ремонту техники Dell</title>
+    <!-- Подключаю нормалайз сиэсэс -->
+    <!-- hello world -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link
+      rel="stylesheet"
+      href="node_modules/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+  </head>
+  <body>
+    <main class="main">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <div class="swiper__gradient-block">
+        </div>
+        <h2 class="swiper__title">
+          Ремонт техники различных брендов
+        </h2>
+        <!-- Additional required wrapper -->
+        <ul class="swiper-wrapper">
+          <!-- Slides -->
+        </ul>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <button class="swiper__handler">Показать все</button>
+      </div>
+
+    </main>
+
+    <template id="slide-template">
+      <div class="swiper-slide flex">
+        <div class="logoplace">
+        </div>
+        <button class="swiper__btn">
+        </button>
+      </div>
+    </template>
+
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

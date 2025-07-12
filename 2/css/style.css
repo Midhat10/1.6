@@ -1,0 +1,198 @@
+html {
+    box-sizing: border-box;
+    }
+
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+
+/* global */
+
+ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+.flex {
+    display: flex;
+}
+
+
+body {
+  position:relative;
+  margin: 0;
+  padding: 0;
+  max-width: 320px;
+  width:100%;
+  font-family: 'TTLakes',sans-serif;
+  font-weight: 400;
+}
+
+
+.aside {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0 auto 0 0;
+  padding: 0 24px;
+  background-color: #ffffff;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2),
+-2px 0 4px 0 rgba(69, 79, 126, 0.02);
+}
+
+.btn {
+  position: relative;
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  background-color:#FF3E79;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.5;
+}
+
+
+
+/* aside__header */
+
+
+
+
+.aside__header {
+  padding-top:18.73px;
+  padding-bottom:46.27px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoplace {
+  margin-right: 60px;
+}
+
+.nav__btn {
+  bottom:5px;
+}
+
+.nav__btn--cancellation {
+  background-image: url("../svg/cancellation-small.svg");
+}
+
+.nav__btn--search {
+background-image: url("../svg/search-small.svg");
+}
+
+/* main */
+
+.main__list {
+  flex-direction: column;
+  gap:32px;
+}
+
+
+.main__item--active {
+  position:relative;
+}
+
+
+.main__item--active::before {
+  content:"";
+  position:absolute;
+  left:-24px;
+  top:-5px;
+  width:4px;
+  height:32px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #41f6d7;
+}
+
+
+.main__link {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #1b1c21;
+}
+
+.main__link--active {
+  color: #7e7e82;
+}
+
+/* aside__footer */
+
+
+.aside__btns-list {
+  margin-bottom: 11px;
+  gap:16px;
+}
+
+.aside__btn--phone {
+    background-image: url("../svg/phone-small.svg");
+}
+
+.aside__btn--feedback {
+    background-image: url("../svg/feedback-small.svg");
+}
+
+.aside__btn--contacts {
+    background-image: url("../svg/contacts-small.svg");
+}
+
+.contacts {
+  flex-direction: column;
+  gap:12px;
+}
+
+.contacts__link--mail {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #1b1c21;
+}
+
+.contacts__link--phone {
+font-weight: 700;
+font-size: 24px;
+line-height: 133%;
+letter-spacing: -0.03em;
+color: #1b1c21;
+}
+
+
+.aside__langs {
+  margin-top:40px;
+  padding-bottom: 32px;
+}
+
+.langs {
+  gap:7px;
+}
+
+.langs__link {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #1b1c21;
+}
+
+.langs__link--ru {
+  color: #7e7e82;
+}

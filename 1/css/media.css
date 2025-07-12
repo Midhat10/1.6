@@ -1,0 +1,256 @@
+@media (min-width: 767px) {
+  .header {
+    height: 88px;
+    padding: 0;
+  }
+  .container {
+    padding: 0 24px;
+  }
+
+  .header--left {
+    gap: 40px;
+  }
+
+  .header__block {
+    gap: 39px;
+  }
+
+  .header__nav {
+    margin-right: 15px;
+  }
+
+  .nav__list {
+    gap: 15px;
+  }
+
+  .nav__item--hidden {
+    display: list-item;
+  }
+
+  .nav__item--request {
+    margin-left: 25px;
+  }
+
+  .nav__item--request::after {
+    left: -20px;
+  }
+
+
+  .block__burger {
+    position: relative;
+  }
+
+  .block__burger::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    right: -20px;
+    top: 5px;
+    background-color: #eaeaea;
+  }
+
+  .nav__list--hidden {
+    display: flex;
+  }
+
+  .main__title {
+    margin-top:22px;
+    margin-bottom: 25px;
+    letter-spacing: -0.9px;
+  }
+
+  .main__title svg {
+    left: -23px;
+  }
+
+  .main__menu {
+    margin-bottom: 12.8px;
+    align-items: flex-end;
+  }
+
+  .menu__list {
+    padding-top: 6px;
+  }
+
+  .menu__link {
+    padding: 7px 16.1px 5.5px;
+    letter-spacing: -0.4px;
+  }
+
+  .main__content {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 208px;
+    margin:0;
+    padding-right: 8px;
+    gap:48px;
+  }
+
+  .main__text {
+    align-self: flex-start;
+    margin-bottom: 0;
+    margin-top: 2.3px;
+  }
+
+  .text__inner {
+    margin-top: 0;
+    height: 167px;
+  }
+
+  .text__excerpt {
+    line-height: 143%;
+    margin: 0;
+    letter-spacing: 0px;
+  }
+
+  .text__excerpt--top {
+    margin-bottom: 17px;
+  }
+
+  .text__excerpt--bottom {
+    width: 101%;
+  }
+
+  .main__image {
+    width: 360px;
+    min-height: 204px;
+    margin-bottom: 0;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 1120px) {
+
+  .main__wrapper {
+    margin: 0 auto;
+    width: 1120px;
+    height: 535px;
+  }
+
+  .container {
+    padding: 0 34px;
+    width: 1120px;
+    margin: 0 auto;
+  }
+
+  .main__container {
+    padding-right: 28px;
+  }
+
+
+  .header {
+    display: none;
+  }
+
+  .main__content {
+    height: auto;
+    padding:0;
+  }
+
+
+  .main__search {
+    padding-top: 42px;
+    padding-bottom: 8px;
+  }
+
+  .main__title {
+    margin: 0;
+  }
+
+  .main__title svg {
+    position: absolute;
+    left: -32px;
+  }
+
+
+  .inner {
+    display: flex;
+    gap: 32px;
+  }
+
+  .main__inner {
+    margin-right: 3px;
+  }
+
+
+
+  .inner__item {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+  }
+
+
+
+  .menu__list {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .menu__link {
+    padding: 8px 16px 5px 20px;
+    letter-spacing: -0.2px;
+  }
+
+  .menu__list {
+    margin-left: 5px;
+    padding: 1px;
+  }
+
+  .main__menu {
+    margin-bottom: 5px;
+  }
+
+  .menu__link--active {
+    padding-right: 26px;
+  }
+
+  .menu__link--repaired--devices {
+    padding-right: 21px;
+  }
+
+  .menu__link--services-centres {
+    position:relative;
+    top:1.4px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .menu__link--special-prices {
+    position:relative;
+    top:2.6px;
+  }
+
+  .main__content {
+    gap: 36px;
+  }
+
+  .main__text {
+    margin-top: 0;
+  }
+
+  .text__inner {
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+
+  .text__excerpt {
+    letter-spacing: 0.22px;
+  }
+
+  .text__excerpt--top {
+    margin-bottom: 19px;
+  }
+
+  .main__image {
+    width: 531px;
+    height: 307px;
+    margin-bottom: 0;
+  }
+
+
+  .main__text {
+    padding-top: 10px;
+  }
+}
