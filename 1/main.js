@@ -26,62 +26,86 @@ const getSwiper = () =>
   });
 
 // Переменные
-var list = document.querySelector(".swiper-wrapper");
-var list2 = document.querySelector(".swiper-wrapper__different-technics")
-var items = list.children;
+var lists = document.querySelectorAll(".swiper-wrapper");
+var list1 = lists[0];
+var list2 = lists[1]
+console.log(list1);
+var items1 = list1.children;
+var items2 = list2.children
 
-var swiperTemplate = document.querySelector("#slide-template").content;
-var newSlideTemplate = swiperTemplate.querySelector(".swiper-slide");
+var swiperTemplate = document.querySelector("#slide-template").content
+var newSlideTemplates = swiperTemplate.querySelectorAll(".swiper-slide");
+var newSlideTemplates1 = newSlideTemplates[0];
+var newSlideTemplates2 = newSlideTemplates[1];
 
-var swiperTemplate2 = document.querySelector('#slide-teplate').content;
-var newSlideTemplate2 = swiperTemplate2.querySelector('.swiper-slide');
-
-var addSlide = function (logotype) {
-  var slide = newSlideTemplate.cloneNode(true);
-  var logo = slide.querySelector(".logoplace");
-  logo.style.backgroundImage = `url(${logotype})`;
-
+var addSlide = function (template,list,logotype,index) {
+  var slide = template.cloneNode(true);
+  if (logotype) {
+      var logo = slide.querySelector(".logoplace");
+      logo.style.backgroundImage = `url(${logotype})`;
+  } else {
+    var text = slide.querySelector(".swiper__text")
+    text.textContent = `Ремонт ${index}`
+    console.log('slava Iisusu!');
+  }
   list.appendChild(slide);
 };
 
-var addSlide2 = function () {
-  var slide = newSlideTemplate2.cloneNode(true);
-  list2.appendChild(slide);
-};
 
-var render = function () {
+const render = function () {
   for (var i = 1; i <= 8; i++) {
-    addSlide(`img/logo-${i}.png`);
+    addSlide(newSlideTemplates1,list1,`img/logo-${i}.png`);
   }
 
   for (i = 1; i <= 3; i++) {
-    addSlide(`img/logo-${i}.png`);
+    addSlide(newSlideTemplates1,list1,`img/logo-${i}.png`);
   }
-};
 
-render();
+    for ( i = 1; i <= 8; i++) {
+    addSlide(newSlideTemplates2,list2, '', i);
+  }
+} ();
+
+const array = [];
+for (var i = 1; i <= 8; i++) {
+  array.push(`Ремонт ${i}`)
+}
+console.log(array);
+
+// render();
 
 // ставим прослушиватель на кнопку Показать всё.
 
-var btnHandler = document.querySelector(".swiper__handler");
 
-btnHandler.addEventListener("click", function () {
-  var text = btnHandler.textContent;
-  if (text === "Показать все") {
-    for (var i = 0; i < items.length; i++) {
-      items[i].classList.add("swiper__show");
+
+var btnHandlers = document.querySelectorAll(".swiper__handler");
+var btnHandler1 = btnHandlers[0];
+var btnHandler2 = btnHandlers[1];
+
+const inputFunction = function (btnHandler,items,list) {
+  btnHandler.addEventListener("click", function () {
+    var text = btnHandler.textContent;
+    if (text === "Показать все") {
+      for (var i = 0; i < items.length; i++) {
+        items[i].classList.add("swiper__show");
+      }
+      btnHandler.textContent = "Скрыть";
+      list.style.marginBottom = "45px";
+      console.log(text);
+    } else {
+      for (i = 0; i < items.length; i++) {
+        items[i].classList.remove("swiper__show");
+      }
+      btnHandler.textContent = "Показать все";
+      list.style.marginBottom = "24px";
     }
-    btnHandler.textContent = "Скрыть";
-    list.style.marginBottom = "45px";
-    console.log(text);
-  } else {
-    for (i = 0; i < items.length; i++) {
-      items[i].classList.remove("swiper__show");
-    }
-    btnHandler.textContent = "Показать все";
-    list.style.marginBottom = "24px";
-  }
-});
+  } );
+}
+
+inputFunction(btnHandler1,items1,list1)
+inputFunction(btnHandler2,items2,list2)
+
+
 
 // Что делать, чтобы слайды при резайзе прорисовывались?
 let swiper = null;

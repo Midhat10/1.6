@@ -553,6 +553,10 @@ color: #1b1c21;
   height: 86px;
 }
 
+.swiper-wrapper--big-size {
+  height: 184px;
+}
+
 .swiper__gradient-block {
   position:absolute;
   z-index: 10;
@@ -575,6 +579,15 @@ color: #1b1c21;
   padding: 17px 17px 16px 16px;
   height: 72px;
   background-color: #fff;
+}
+
+.swiper-slide--size {
+  flex-direction: column;
+  height: 160px;
+}
+
+.swiper__btn--technick {
+  margin-left: auto;
 }
 
 

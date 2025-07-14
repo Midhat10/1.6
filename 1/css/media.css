@@ -1,4 +1,4 @@
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .header {
     height: 88px;
     padding: 0;
@@ -287,9 +287,15 @@
     display:none;
   }
 
-  .swiper__show:nth-child(n + 7) {
+
+.swiper-slide--size:nth-child(n+ 4) {
+  display: none;
+}
+
+  .swiper__show:nth-child(n + 4) {
   display: flex;
 }
+
 
   .swiper-pagination {
     display: none;
@@ -323,7 +329,15 @@
     display:none;
   }
 
-  .swiper__show:nth-child(n + 9) {
+  .swiper-slide--size:nth-child(n+ 4) {
+  display: flex;
+}
+
+.swiper-slide--size:nth-child(n+ 5) {
+  display: none;
+}
+
+  .swiper__show:nth-child(n + 5) {
   display: flex;
 }
 
