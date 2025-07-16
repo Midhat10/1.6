@@ -41,17 +41,19 @@ h1 {
   background-color:#FF3E79;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  transition: opacity 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
 }
 
-.btn:hover {
-  opacity: 0.5;
+.btn:hover,
+.nav__link:hover {
+    filter:brightness(3);
 }
 
-.btn:active {
-  background-color:#db3668;
-  opacity:1;
+.btn:active,
+.nav__link:active {
+    filter:brightness(0.9);
 }
+
 
 
 
@@ -99,23 +101,15 @@ body {
 
 
 
-.nav__btn--call {
-    background: transparent url(../svg/call.svg) no-repeat center center;
-}
 
-.nav__btn--message {
-    background: transparent url(../svg/message.svg) no-repeat center center;
-}
-
-.nav__btn--contacts {
-  background: transparent url(../svg/contacts.svg) no-repeat center center;
-}
 
 .nav__link,.main__link {
   display: block;
   height: 40px;
   width:40px;
+  transition: filter 0.3s ease-in-out;
 }
+
 
 .nav__link--request,
 .main__link--request {
@@ -128,10 +122,8 @@ body {
   background: transparent url(../svg/status.svg) no-repeat center center;
 }
 
-.burger__btn {
-  display: block;
-  width:40px;
-  height:40px;
+.btn__burger {
+  /* background-color: #FF3E79; */
   background: transparent url('../svg/burger.svg') no-repeat center center;
 }
 
@@ -165,29 +157,17 @@ body {
   display: none;
 }
 
-.nav__btn {
-  display: block;
-  cursor: pointer;
-  border-radius: 50%;
-  border:none;
-  width:40px;
-  height:40px;
-  transform:scale(1);
-  transition: transform 0.2s ease-in-out;
+
+.btn--call {
+    background: transparent url(../svg/call.svg) no-repeat center center;
 }
 
-.nav__btn:hover {
-    transform:scale(1.1);
+.btn--message {
+    background: transparent url(../svg/message.svg) no-repeat center center;
 }
 
-.nav__btn:active {
-  transform:scale(0.9);
-}
-
-.nav__btn svg {
-    position: relative;
-    left: -7px;
-    top: -3px;
+.btn--contacts {
+  background: transparent url(../svg/contacts.svg) no-repeat center center;
 }
 
 .nav__item--request {
@@ -487,7 +467,7 @@ color: #1b1c21;
 
 /* свайпер */
 
-.swiper__btn {
+.btn__swiper {
   position: relative;
   width: 36px;
   height: 36px;
@@ -496,12 +476,10 @@ color: #1b1c21;
   background-image: url('../svg/arrow.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  transition: opacity 0.2s ease-in-out;
+  background-color: transparent;
 }
 
-.swiper__btn:hover {
-  opacity: 0.5;
-}
+
 
 :root {
   --swiper-pagination-color: #b5b6bc;
@@ -550,6 +528,7 @@ color: #1b1c21;
 }
 
 .swiper-wrapper {
+  padding-top: 20px;
   height: 86px;
 }
 
@@ -565,7 +544,7 @@ color: #1b1c21;
 
   display: block;
   width:24px;
-  height: 72px;
+  height: -webkit-fill-available;
   background-image: linear-gradient(to left, #f8f8f8 0.04%, rgba(248, 248, 248, 0) 100%);
 }
 
@@ -586,7 +565,11 @@ color: #1b1c21;
   height: 160px;
 }
 
-.swiper__btn--technick {
+.swiper-slide__services {
+  height: 160px;
+}
+
+.btn__swiper--technick {
   margin-left: auto;
 }
 

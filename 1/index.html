@@ -22,7 +22,7 @@
       <div class="header__container container flex">
         <div class="header__block block flex">
           <div class="block__burger">
-            <button class="btn btn__reset burger__btn"></button>
+            <button class="btn btn__reset btn__burger"></button>
           </div>
           <a href="#" class="header__logo">
             <img src="svg/Group.svg" alt="Logo" class="logo">
@@ -31,15 +31,15 @@
         <nav class="header__nav nav flex">
           <ul class="nav__list flex nav__list--hidden">
             <li class="nav__item nav__item--hidden">
-              <button class="nav__btn nav__btn--call">
+              <button class="btn btn__reset btn--call">
               </button>
             </li>
             <li class="nav__item nav__item--hidden">
-              <button class="nav__btn nav__btn--message">
+              <button class="btn btn__reset btn--message">
               </button>
             </li>
             <li class="nav__item nav__item--hidden">
-              <button class="nav__btn nav__btn--contacts">
+              <button class="btn btn__reset btn--contacts">
               </button>
             </li>
             <li class="nav__item nav__item--request">
@@ -148,9 +148,9 @@
           </div>
         </div>
 
-        <!-- Подключение свайпера -->
+        <!-- Подключение свайпера 1 -->
 
-        <div class="swiper">
+        <div class="swiper swiper1">
           <div class="swiper__gradient-block">
           </div>
           <h2 class="swiper__title">
@@ -165,11 +165,29 @@
           <button class="swiper__handler btn__reset">Показать все</button>
         </div>
 
-        <div class="swiper">
+        <!-- Подключение свайпера 2 -->
+        <div class="swiper swiper2">
           <div class="swiper__gradient-block">
           </div>
           <h2 class="swiper__title">
             Ремонт различных видов техники
+          </h2>
+          <!-- Additional required wrapper -->
+          <ul class="swiper-wrapper swiper-wrapper--big-size">
+
+            <!-- Slides -->
+          </ul>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <button class="swiper__handler swiper__handler-2 btn__reset">Показать все</button>
+        </div>
+
+        <!-- Подключение свайпера 3 -->
+        <div class="swiper swiper3">
+          <div class="swiper__gradient-block">
+          </div>
+          <h2 class="swiper__title">
+            Цены на услуги
           </h2>
           <!-- Additional required wrapper -->
           <ul class="swiper-wrapper swiper-wrapper--big-size">
@@ -292,16 +310,40 @@
 
     <!-- template/образец -->
     <template id="slide-template">
+      <!-- образец 1 слайда -->
       <div class="swiper-slide flex">
         <div class="logoplace">
         </div>
-        <button class="swiper__btn btn__reset">
+        <button class="btn btn__swiper btn__reset">
         </button>
       </div>
 
+            <!-- образец 2 слайда -->
+
       <div class="swiper-slide swiper-slide--size flex">
-        <p class="swiper__text">ghbdtn</p>
-        <button class="swiper__btn btn__reset swiper__btn--technick">
+        <p class="swiper__text"></p>
+        <button class="btn__swiper btn__reset btn__swiper--technick">
+        </button>
+      </div>
+
+            <!-- образец 3 слайда -->
+      <div class="swiper-slide swiper-slide__services flex">
+        <ul class="swiper__list">
+          <li class="swiper__item">
+            <p class="swiper__topic">Ремонтные услуги</p>
+            <span></span>
+          </li>
+          <li class="swiper__item">
+            <p class="swiper__topic">Цена</p>
+            <span></span>
+          </li>
+          <li class="swiper__item">
+            <p class="swiper__topic">Срок</p>
+            <span></span>
+          </li>
+        </ul>
+        <button class="btn btn__reset btn__swiper--services">
+          Заказать
         </button>
       </div>
     </template>
